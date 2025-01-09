@@ -645,4 +645,8 @@ body {
         padding: 1rem;
         width: 300px;
     }
+
+    .details-list-wrapper {
+        flex-direction: column;
+    }
 }
