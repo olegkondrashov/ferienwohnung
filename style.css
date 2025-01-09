@@ -459,6 +459,7 @@ body {
     /* ====== Weitere Infos (z.B. Küche, Badezimmer) ====== */
     .details-list-wrapper {
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-evenly;
     }
     .details-list {
@@ -582,8 +583,6 @@ body {
 
 @media (max-width: 768px) {
 
-
-
     .hero-content h1 {
         font-size: 1rem;
     }
@@ -617,6 +616,11 @@ body {
         width: 100%;
     }
 
+    .gallery h2 {
+        font-size: 2rem;
+    }
+    
+
 }
 
 @media (max-width: 480px) {
@@ -639,5 +643,6 @@ body {
 
     .hero-content {
         padding: 1rem;
+        width: 300px;
     }
 }
