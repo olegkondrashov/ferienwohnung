@@ -26,7 +26,7 @@ houseToChoose.forEach((house) => {
 // BUCHUNGS-DATEN
 ////////////////////////////////////////////
 
-// Gebuchte Daten jetzt im Format "DD-MM-YYYY"
+// Gebuchte Daten im Format "DD-MM-YYYY"
 const bookedDatesHouse1 = [
   '10-01-2025',
   '15-01-2025',
@@ -61,7 +61,7 @@ let currentMonth = today.getMonth();
 function getActiveHouseId() {
   const activeHouse = document.querySelector(".house-to-choose.house-active");
   if (!activeHouse) {
-    return null; // oder Default Haus 1, falls du das möchtest
+    return null; // oder Default Haus 1
   }
   return activeHouse.id; // z.B. "house1" oder "house2"
 }
