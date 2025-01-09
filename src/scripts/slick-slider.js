@@ -17,6 +17,21 @@ $(document).ready(function () {
     ]
   });
 
+  $('.slider-wrapper1').slick({
+    infinite: false,
+    centerPadding: '0',
+    slidesToShow: 3,
+    responsive: [
+      {
+        breakpoint: 769,
+        settings: {
+          arrows: true,
+          centerPadding: '40px',
+          slidesToShow: 1
+        }
+      },
+    ]
+  });
   
 
 
