@@ -1,5 +1,5 @@
 
-$(document).ready(function () {
+$(document).ready(function () {  
   //main
   $('.slider-wrapper').slick({
     infinite: false,
