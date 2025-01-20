@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ferienwohnung</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="/src/slick-1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/src/css/slider.styles.css">
+    <link rel="stylesheet" href="/src/css/slick-slider.styles.css">
+</head>
+
+<body>
+
+    <!-- HEADER / NAVIGATION -->
+    <header class="header">
+        <div class="logo">Ferienwohnung</div>
+        <nav class="nav">
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#calendar">Kalender</a></li>
+                <li><a href="#booking-form">Buchung</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="hero" class="hero">
+        <div class="hero-wrapper">
+            <div class="hero-content-bg"></div>
+            <div class="hero-content">
+                <h1>Willkommen in <br> unserer Ferienwohnung </h1>
+                <p>Erlebe erstklassigen Komfort</p>
+                <button onclick="document.querySelector('#calendar').scrollIntoView({behavior:'smooth'})">
+                    Jetzt Verfügbarkeit prüfen
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section class="description">
+        <div class="description-item">
+            <h2>Erfahrungen sind befriedigender als Dinge</h2>
+        </div>
+        <div class="description-item">
+            <img src="./src/img/erfahrung.jpg"
+                alt="ferienwohnung description">
+        </div>
+        <div class="description-item">
+            <div class="description-text">
+                <p>
+                    <strong>Erlebnisreisen sind geprägt von der Überraschung des „Unbekannten“, dem Luxus „unerwarteter
+                        Möglichkeiten“ und der Freude, persönliche „Hürden zu überwinden“.</strong> <br>
+
+                    Ebenso zeigt sich, dass Menschen langfristig mehr Zufriedenheit empfinden, wenn sie ihr Geld in
+                    Erlebnisse investieren, statt in materielle Dinge. Dies belegen zahlreiche Studien.
+
+                    Eine gemütliche Ferienwohnung bietet genau diesen Rahmen: einen Ort, an dem Sie nicht nur
+                    entspannen, sondern auch besondere Erinnerungen schaffen können. Ob bei einem Sonnenaufgang auf der
+                    Terasse, gemeinsamen Kochabenden in der gut ausgestatteten Küche oder beim Erkunden der Umgebung –
+                    hier entstehen Erlebnisse, die bleiben.
+
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="amenities-section">
+        <h2>Ausstattung von Haus Fernblick Herr Rolf Biersack</h2>
+
+        <ul class="amenities-list">
+            <li><i class="fas fa-smoking-ban"></i> Nichtraucherzimmer</li>
+            <li><i class="fas fa-parking"></i> Parkplatz inbegriffen</li>
+            <li><i class="fas fa-wifi"></i> WLAN inklusive</li>
+            <li><i class="fas fa-utensils"></i> Küche</li>
+            <li><i class="fas fa-umbrella-beach"></i> Terrasse</li>
+            <li><i class="fas fa-fire"></i> Grillmöglichkeiten</li>
+            <li><i class="fas fa-table-tennis"></i> Tischtennis</li>
+        </ul>
+
+        <!-- Beispiel für einen weiteren Abschnitt, z.B. Parkmöglichkeiten -->
+        <div>
+            <div class="sub-heading">Parkmöglichkeiten</div>
+            <p class="detail-text">
+                Private Parkplätze stehen kostenfrei an der Unterkunft (Reservierung ist nicht möglich) zur Verfügung.
+            </p>
+        </div>
+
+        <!-- Beispiel: Internet -->
+        <div>
+            <div class="sub-heading">Internet</div>
+            <p class="detail-text">
+                WLAN ist in allen Bereichen nutzbar und ist kostenfrei.
+            </p>
+        </div>
+
+        <!-- Beispiel: Küche -->
+        <div>
+            <div class="sub-heading">Küche</div>
+            <p class="detail-text">
+                Hochstuhl, Kaffeemaschine, Toaster, Herdplatte, Backofen, Wasserkocher, Spülmaschine, Mikrowelle,
+                Kühlschrank
+            </p>
+        </div>
+
+        <!-- Beispiel: Badezimmer -->
+        <div>
+            <div class="sub-heading">Badezimmer</div>
+            <p class="detail-text">
+                Zusätzliches WC, Eigenes Badezimmer, Haartrockner, Dusche
+            </p>
+        </div>
+
+        <!-- Beispiel: Sonstiges -->
+        <div>
+            <div class="sub-heading">Sonstiges</div>
+            <p class="detail-text">
+                Nichtraucherunterkunft (Alle öffentlichen und privaten Bereiche sind Nichtraucherzonen)
+            </p>
+        </div>
+
+        <!-- Beispiel: Gesprochene Sprachen -->
+        <div>
+            <div class="sub-heading">Gesprochene Sprachen</div>
+            <p class="detail-text">
+                Deutsch, Griechisch, Englisch, Spanisch, Französisch, Italienisch, Niederländisch, Portugiesisch
+            </p>
+        </div>
+    </section>
+
+
+    <!-- Slider Section -->
+
+    <section class="gallery">
+        <h2>Unsere Wohnungen:</h2>
+        <div class="slider-container1">
+            <h3>Superior Apartment mit 1 Schlafzimmer</h3>
+            <div class="apartment-highlights">
+                <div class="highlight-item">
+                    <i class="fa fa-home"></i>
+                    <span>Ganze Ferienwohnung (50 m²)</span>
+                </div>
+                <div class="highlight-item">
+                    <i class="fa fa-bed"></i>
+                    <span>2 Einzelbetten, bequeme Betten</span>
+                </div>
+                <div class="highlight-item">
+                    <i class="fa fa-bath"></i>
+                    <span>Eigenes Badezimmer</span>
+                </div>
+                <div class="highlight-item">
+                    <i class="fa fa-tree"></i>
+                    <span>Gartenblick</span>
+                </div>
+                <div class="highlight-item">
+                    <i class="fa fa-wifi"></i>
+                    <span>Kostenfreies WLAN</span>
+                </div>
+            </div>
+            <div>
+                <!-- Beschreibungstext -->
+                <div class="apartment-text">
+                    <p><strong>Größe des Apartments:</strong> 50 m²</p>
+                    <p>Featuring a private entrance, this apartment is comprised of a kitchen, 1 bedroom and 1 bathroom
+                        with a shower and a hairdryer. Guests will find a stovetop, a refrigerator, a dishwasher and an
+                        oven in the fully equipped kitchen. The apartment also has a barbecue. Boasting a terrace with
+                        garden views, this apartment also offers a coffee machine and a TV. The unit offers 2 beds.</p>
+                    
+
+                    <!-- Küche + Badezimmer + Aussicht + weitere Ausstattung -->
+                    <div class="details-list-wrapper">
+                        <div class="details-list">
+                            <h4>In Ihrer eigenen Küche:</h4>
+                            <ul>
+                                <li>Hochstuhl, Kühlschrank, Kaffeemaschine</li>
+                                <li>Mikrowelle, Wasserkocher, Spülmaschine</li>
+                                <li>Backofen, Herdplatte, Toaster, Grill</li>
+                            </ul>
+                        </div>
+                        <div class="details-list">
+                            <h4>In Ihrem eigenen Badezimmer:</h4>
+                            <ul>
+                                <li>Dusche, Haartrockner</li>
+                                <li>Zusätzliches WC</li>
+                            </ul>
+                        </div>
+                        <div class="details-list">
+                            <h4>Aussicht:</h4>
+                            <ul>
+                                <li>Terrasse, Gartenblick</li>
+                            </ul>
+                        </div>
+                        <div class="details-list">
+                            <h4>Ausstattung des Apartments:</h4>
+                            <ul>
+                                <li>TV, CD-Player, DVD-Player, Radio</li>
+                                <li>Bügeleinrichtungen, Privater Eingang</li>
+                                <li>Raucher: Rauchen ist nicht gestattet</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="slider-wrapper">
+                        <img src="/src/img/slider1.jpg" alt="">
+                        <img src="/src/img/slider2.jpg" alt="">
+                        <img src="/src/img/slider3.jpg" alt="">
+                        <img src="/src/img/slider4.jpg" alt="">
+                        <img src="/src/img/slider5.jpg" alt="">
+                        <img src="/src/img/slider6.jpg" alt="">
+                        <img src="/src/img/slider7.jpg" alt="">
+                        <img src="/src/img/slider8.jpg" alt="">
+
+                    </div>
+                </div>
+                <div class="slider-container1">
+                    <h3>Superior Apartment mit 2 Schlafzimmern</h3>
+                    <div class="apartment-highlights">
+                        <div class="highlight-item">
+                            <i class="fa fa-home"></i>
+                            <span>Ganze Ferienwohnung (83 m²)</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fa fa-bed"></i>
+                            <span> 1 Doppelbett</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fa fa-bed"></i>
+                            <span> 2 Einzelbetten</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fa fa-bath"></i>
+                            <span>Eigenes Badezimmer</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fa fa-tree"></i>
+                            <span>Gartenblick</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fa fa-wifi"></i>
+                            <span>Kostenfreies WLAN</span>
+                        </div>
+                    </div>
+                    <div>
+                        <!-- Beschreibungstext -->
+                        <div class="apartment-text">
+                            <p><strong>Größe des Apartments:</strong> 83 m²</p>
+                            <p>Featuring a private entrance, this apartment is comprised of a kitchen, 1 bedroom and 1 bathroom
+                                with a shower and a hairdryer. Guests will find a stovetop, a refrigerator, a dishwasher and an
+                                oven in the fully equipped kitchen. The apartment also has a barbecue. Boasting a terrace with
+                                garden views, this apartment also offers a coffee machine and a TV. The unit offers 2 beds.</p>
+                            
+        
+                            <!-- Küche + Badezimmer + Aussicht + weitere Ausstattung -->
+                            <div class="details-list-wrapper">
+                                <div class="details-list">
+                                    <h4>In Ihrer eigenen Küche:</h4>
+                                    <ul>
+                                        <li>Hochstuhl, Kühlschrank, Kaffeemaschine</li>
+                                        <li>Mikrowelle, Wasserkocher, Spülmaschine</li>
+                                        <li>Backofen, Herdplatte, Toaster, Grill</li>
+                                    </ul>
+                                </div>
+                                <div class="details-list">
+                                    <h4>In Ihrem eigenen Badezimmer:</h4>
+                                    <ul>
+                                        <li>Dusche, Haartrockner</li>
+                                        <li>Zusätzliches WC</li>
+                                    </ul>
+                                </div>
+                                <div class="details-list">
+                                    <h4>Aussicht:</h4>
+                                    <ul>
+                                        <li>Terrasse, Gartenblick</li>
+                                    </ul>
+                                </div>
+                                <div class="details-list">
+                                    <h4>Ausstattung des Apartments:</h4>
+                                    <ul>
+                                        <li>TV, CD-Player, DVD-Player, Radio</li>
+                                        <li>Bügeleinrichtungen, Privater Eingang</li>
+                                        <li>Raucher: Rauchen ist nicht gestattet</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider-wrapper1">
+                        <img src="/src/img/slider9.jpg" alt="">
+                        <img src="/src/img/slider10.jpg" alt="">
+                        <img src="/src/img/slider11.jpg" alt="">
+                        <img src="/src/img/slider12.jpg" alt="">
+                        <img src="/src/img/slider13.jpg" alt="">
+                        <img src="/src/img/slider14.jpg" alt="">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- CALENDAR SECTION -->
+    <section id="calendar" class="calendar-section">
+        <h2>Welche Wohnung möchtest Du buchen?</h2>
+        <div class="houses-choice">
+            <div id="house1" class="house-to-choose house-active">
+                <div class="house-to-choose__description">
+                    <h3>Wohnung 1</h3>
+                    <p>1 Schlafzimmer</p>
+                </div>
+                <img src="./src/img/wohnung1.jpg" alt="Wohnung 1">
+            </div>
+            <div id="house2" class="house-to-choose">
+                <div class="house-to-choose__description">
+                    <h3>Wohnung 2</h3>
+                    <p>2 Schlafzimmer</p>
+                </div>
+                <img src="./src/img/wohnung2.jpg" alt="Wohnung 2">
+            </div>
+        </div>
+        <br>
+        <h2>Verfügbarkeit prüfen</h2>
+        <p class="info-text">
+            Grau hinterlegte Tage sind bereits ausgebucht und können nicht ausgewählt werden.
+            <br />
+            Klicke auf mehrere freie Tage, um sie zu markieren.
+        </p>
+        <br>
+        <div class="calendar-container">
+            <!-- Navigation für den Monat -->
+            <button id="btnPrev">&larr; </button>
+            <button id="btnNext"> &rarr;</button>
+            <div id="calendar-grid" class="calendar-grid">
+                <!-- Kalender wird dynamisch via JS erzeugt -->
+            </div>
+        </div>
+    </section>
+
+    <!-- BOOKING FORM SECTION -->
+    <section id="booking-form" class="booking-section">
+        <h2>Jetzt buchen</h2>
+        <form id="bookingForm">
+            <div class="form-group">
+                <label id="form-label" for="selectedDates">Ausgewählte Termine für Wohnung1:</label>
+                <textarea id="selectedDates" name="selectedDates" readonly rows="3"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="fullName">Name:</label>
+                <input type="text" id="fullName" name="fullName" required />
+            </div>
+            <div class="form-group">
+                <label for="phoneNumber">Telefon:</label>
+                <input type="tel" id="phoneNumber" name="phoneNumber" required />
+            </div>
+            <div class="form-group">
+                <label for="emailAddress">E-Mail:</label>
+                <input type="email" id="emailAddress" name="emailAddress" required />
+            </div>
+            <button type="submit" id="submitBtn">Buchungsanfrage senden</button>
+        </form>
+    </section>
+
+    <section class="map-section">
+        <h2>Unsere Lage</h2>
+        <p>
+          Hier findest Du uns – ein perfekter Ausgangspunkt, um die Umgebung zu erkunden!
+        </p>
+        
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4723.214593801937!2d10.220278315358504!3d51.80914652977445!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a5309813a188fd%3A0xf6ea927af41b4a38!2sAm%20Taubenborn%2032A%2C%2037539%20Bad%20Grund%20(Harz)!5e0!3m2!1sde!2sde!4v1736432544579!5m2!1sde!2sde" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </section>
+
+    <footer class="footer">
+        <p>&copy; 2025 Ferienwohnung</p>
+    </footer>
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="/src/slick-1.8.1/slick/slick.min.js"></script>
+    <script src="/src/scripts/slick-slider.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,17 @@
+
+
+.slick-next.slick-arrow,
+.slick-prev.slick-arrow {
+    width: 50px;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.slick-list {
+    width: 95vw;
+}
+
+.slick-disabled {
+    opacity: .2 !important;
+}

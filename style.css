@@ -1,0 +1,695 @@
+/* Apple-Style Inspiration: clean, viel Weißraum, dezente Farben */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Arial", sans-serif;
+}
+
+body {
+    background-color: #f5f5f7;
+    color: #1d1d1f;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+
+/* Header */
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffffcc;
+    backdrop-filter: blur(10px);
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #0071e3;
+    font-weight: 500;
+}
+
+.nav a:hover {
+    text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 80vh;
+    width: 100%;
+    background: url('https://cf.bstatic.com/xdata/images/hotel/max1024x768/626872751.jpg?k=b9300a632791323524c49c8cba43c9a8935e249821d2e8d775a1ea0010ec1602&o=&hp=1') no-repeat center center/cover;
+    text-align: center;
+    padding: 2rem;
+    padding-bottom: 2rem;
+}
+
+.hero-wrapper {
+    position: absolute;
+    top: 45%;
+    right: 5%;
+}
+
+.hero-content {
+    position: relative;
+    width: max-content;
+    color: #fff;
+    background-color: #292d33;
+    text-transform: uppercase;
+    padding: 2rem;
+}
+
+.hero-content-bg {
+    position: absolute;
+    top: -25%;
+    left: 5%;
+    height: 450px;
+    width: 300px;
+    background: rgb(248, 100, 73);
+    z-index: 0;
+}
+
+.hero-content h1 {
+    font-size: 40px;
+    font-weight: 300;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    margin-bottom: 1.5rem;
+}
+
+.hero-content button {
+    background-color: #0071e3;
+    color: #fff;
+    border: none;
+    padding: 0.8rem 1.2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 0.5rem;
+}
+
+.hero-content button:hover {
+    background-color: #005bb5;
+}
+
+
+/* Description section */
+
+.description {
+    margin-top: 80px;
+    display: flex;
+    height: max-content;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.description-item {
+    width: 33.3333%;
+}
+
+.description-item:nth-child(1) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+}
+
+.description-item:nth-child(3) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+
+.description-item h2 {
+    position: relative;
+    font-size: 2rem;
+    margin-bottom: 50px;
+}
+
+.description-item h2::after {
+    content: '';
+    display: block;
+    width: 80%;
+    height: 150px;
+    background: rgb(168, 201, 241);
+    position: absolute;
+    top: -80px;
+    left: 0;
+    z-index: -1;
+}
+
+.description img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.description-item:nth-child(3) img {
+    height: 300px;
+    width: 200px;
+}
+
+.description-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.description-text h3 {
+    font-size: 48px;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.description-text p {
+    font-size: 18px;
+}
+
+
+/* Calendar Section */
+.calendar-section {
+    max-width: 900px;
+    margin: 0 auto 2rem;
+    padding: 80px 1rem;
+    text-align: center;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.calendar-day {
+    background-color: #fff;
+    padding: 0.5rem 0;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.calendar-day.booked {
+    background-color: #c7c7cc;
+    cursor: not-allowed;
+}
+
+.calendar-day.today {
+    border: 2px solid #0071e3;
+}
+
+.calendar-day:hover:not(.booked) {
+    background-color: #e5f1fd;
+}
+
+/* Markierung für ausgewählte Tage */
+.calendar-day.selected {
+    background-color: #cce5ff;
+}
+
+.houses-choice {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.house-to-choose {
+    position: relative;
+    height: 300px;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background: #1d1d1f84;
+}
+
+.house-to-choose__description {
+    position: absolute;
+    bottom: 0;
+    width: 80%;
+    background: aliceblue;
+    z-index: -1;
+}
+
+.house-to-choose__description::before {
+    content: '';
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #005bb5;
+
+}
+
+.houses-choice h3,
+.houses-choice p {
+    display: block;
+    z-index: 1;
+    font-weight: bold;
+}
+
+.houses-choice h3 {
+    font-size: 28px;
+}
+
+.houses-choice p {
+    font-size: 18px;
+}
+
+.houses-choice img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -2;
+    filter: blur(3px);
+}
+
+.house-active {
+    background: none;
+}
+
+.house-active img {
+    filter: blur(0);
+}
+
+
+/* ========== Grund-Styles für die Ausstattungs-Section ========== */
+.amenities-section {
+    margin: 2rem auto;
+    padding: 80px 20%;
+    font-family: Arial, sans-serif;
+    border-radius: 6px;
+    background-color: #f9f9f9;
+}
+
+.amenities-section h2 {
+    text-align: center;
+    margin-bottom: 0.5rem;
+    font-size: 1.4rem;
+}
+
+.amenities-section span {
+    color: #0071e3;
+    font-weight: bold;
+}
+
+.amenities-section .availability-btn {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    padding: 0.6rem 1rem;
+    background-color: #0071e3;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.amenities-section .availability-btn:hover {
+    background-color: #005bb5;
+}
+
+.amenities-section h3 {
+    margin-bottom: 0.75rem;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.amenities-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 0.5rem 1rem;
+}
+
+.amenities-list li {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.amenities-list li i {
+    color: #0071e3;
+    width: 1.2rem;
+    text-align: center;
+}
+
+/* Zusätzliche Abschnitte für detaillierte Infos */
+.amenities-section .sub-heading {
+    font-weight: bold;
+    margin-top: 1rem;
+    margin-bottom: 0.3rem;
+}
+
+.detail-text {
+    margin-bottom: 1rem;
+    line-height: 1.4;
+    font-size: 0.95rem;
+}
+
+.gallery {
+    padding: 0 10%;
+    text-align: center;
+}
+
+.gallery h2 {
+    font-size: 4rem;
+}
+
+
+/* ====== SECTION: Slider + Beschreibung ====== */
+    .my-slider-section {
+      max-width: 1000px;
+      margin: 2rem auto;
+      background: #fff;
+      border-radius: 5px;
+      padding: 1rem;
+    }
+    .slider-container1 {
+        padding-top: 50px;
+    }
+    .slider-container1 h3 {
+      margin-bottom: 0.5rem;
+      font-size: 1.4rem;
+      color: #0071e3;
+    }
+
+    /* Apartment Info + Slider-Wrapper in flexbox */
+    .apartment-flex {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap; /* bei kleinen Screens Umbruch */
+    }
+
+
+    .apartment-text p {
+      margin-bottom: 1rem;
+      font-size: 0.95rem;
+    }
+
+    .apartment-highlights {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+    }
+
+    .highlight-item {
+      background: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      padding: 0.5rem 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.9rem;
+    }
+    .highlight-item i {
+      color: #0071e3;
+      font-size: 1rem;
+      min-width: 1.2rem;
+      text-align: center;
+    }
+
+    /* ====== Slider-Wrapper ====== */
+    .slider-wrapper {
+      display: flex;
+      gap: 0.5rem;
+    }
+    .slider-wrapper img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    /* ====== Weitere Infos (z.B. Küche, Badezimmer) ====== */
+    .details-list-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    .details-list {
+      margin-bottom: 1rem;
+    }
+    .details-list h4 {
+      margin-bottom: 0.4rem;
+      color: #0071e3;
+      font-size: 1rem;
+    }
+    .details-list ul {
+      list-style: none;
+      padding-left: 1rem; /* etwas Einzug */
+    }
+    .details-list li {
+      margin-bottom: 0.3rem;
+      font-size: 0.9rem;
+    }
+
+    /* ====== Preis & Stornierung ====== */
+    .price-box {
+      background: #f0faff;
+      border: 1px solid #cce5ff;
+      border-radius: 4px;
+      padding: 0.75rem;
+      margin: 1rem 0;
+      font-size: 0.95rem;
+    }
+    .price-box strong {
+      color: #0071e3;
+    }
+
+
+    /* === SECTION: Google Maps === */
+    .map-section {
+        max-width: 80%;
+        margin: 2rem auto;
+        background: #fff;
+        border-radius: 6px;
+        overflow: hidden;
+        padding: 1rem;
+        text-align: center;
+      }
+      .map-section h2 {
+        margin-bottom: 0.5rem;
+        font-size: 1.4rem;
+        color: #0071e3;
+      }
+      .map-section p {
+        margin-bottom: 1rem;
+        font-size: 0.95rem;
+        color: #555;
+      }
+  
+      /* === Responsive Container für das iFrame === */
+      .map-container {
+        position: relative;
+        width: 100%;
+        /* 16:9 Seitenverhältnis (kannst du anpassen) */
+        padding-bottom: 56.25%; 
+        /* z.B. 75% für 4:3 oder 50% für 2:1 */
+      }
+      .map-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+      }
+
+
+/* Buttons to Calendar */
+
+#btnNext,
+#btnPrev {
+    font-size: 28px;
+    padding: 0 24px 12px;
+    cursor: pointer;
+}
+
+/* Info-Text */
+.info-text {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 1rem;
+}
+
+/* Booking Form Section */
+.booking-section {
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    padding: 0 1rem;
+}
+
+.booking-section h2 {
+    text-align: center;
+}
+
+.booking-section form {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 0.6rem;
+    border: 1px solid #ccc;
+    border-radius: 0.3rem;
+    resize: none;
+}
+
+#selectedDates[readonly] {
+    background-color: #e0e0e0;
+    cursor: not-allowed;
+}
+
+#submitBtn {
+    background-color: #0071e3;
+    color: #fff;
+    border: none;
+    padding: 0.8rem 1.2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 0.3rem;
+    display: block;
+    margin: 0 auto;
+}
+
+#submitBtn:hover {
+    background-color: #005bb5;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #fafafa;
+    border-top: 1px solid #ccc;
+}
+
+
+
+
+/* Responsive Design */
+
+
+
+@media (max-width: 768px) {
+
+    .hero-content h1 {
+        font-size: 1rem;
+    }
+
+    .hero-wrapper {
+        top: 50%;
+        right: 50%;
+        transform: translate(50%, -50%);
+    }
+
+    .hero-content-bg {
+        display: none;
+    }
+
+    .description {
+        flex-direction: column;
+        margin-top: 0;
+        padding-top: 30px;
+    }
+
+    .description-item {
+        width: 100%;
+    }
+
+    .amenities-section {
+        padding: 0 5%;
+    }
+
+    .house-to-choose {
+        width: 100%;
+    }
+
+    .gallery h2 {
+        font-size: 2rem;
+    }
+    
+
+}
+
+@media (max-width: 480px) {
+
+    .header {
+        padding: 0.8rem;
+    }
+
+    .logo {
+        font-size: 1rem;
+    }
+
+    .nav ul {
+        gap: 10px;
+    }
+
+    .nav a {
+        font-size: 14px;
+    }
+
+    .hero-content {
+        padding: 1rem;
+        width: 300px;
+    }
+
+    .details-list-wrapper {
+        flex-direction: column;
+    }
+
+    .gallery {
+        padding: 0 10px;
+    }
+}
