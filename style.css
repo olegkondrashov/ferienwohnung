@@ -634,14 +634,13 @@ body {
     }
 
     .hero-content-bg {
-        height: 300px;
-        width: 220px;
-        left: 8%;
-        top: -25%;
+        display: none;
     }
 
     .description {
         flex-direction: column;
+        margin-top: 0;
+        padding-top: 30px;
     }
 
     .description-item {
